@@ -33,11 +33,11 @@ describe('Reservation  Page', () => {
   })
 
   it('Should be able to navigate between booking page and reservation page', () => {
-    cy.get("[class='navigation__icon']").click()
-    cy.get(".navigation__link").eq(1).click()
+    cy.get("[class='navigation__icon']").should('be.visible').click()
+    cy.get(".navigation__link").eq(1).should('be.visible').click()
     cy.wait(500)
-    cy.get("[class='navigation__icon']").click()
-    cy.get(".navigation__link").eq(0).click()
+    cy.get("[class='navigation__icon']").should('be.visible').click()
+    cy.get(".navigation__link").eq(0).should('be.visible').click()
 
 
 })
